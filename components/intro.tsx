@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect } from "react";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -12,8 +12,7 @@ import BackgroundCircles from "@/components/BackgroundCircles";
 
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTypewriter } from "react-simple-typewriter";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 export default function Intro() {
   const [text, helper] = useTypewriter({
@@ -25,9 +24,6 @@ export default function Intro() {
     delaySpeed: 800,
   });
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -40,11 +36,7 @@ export default function Intro() {
       <BackgroundCircles />
       <div
         className="flex items-center "
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
+
       >
         <div className="relative">
           <motion.div>
