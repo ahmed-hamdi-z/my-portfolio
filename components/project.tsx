@@ -3,6 +3,7 @@
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
